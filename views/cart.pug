@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1 My Cart
+  table.table
+    thead
+      th Name
+      th No. of Seats
+      th Food
+      th Drink
+      th Action
+    tbody
+      each item in cart
+        tr
+          td=item.name
+          td=item.seats
+          td=item.food
+          td=item.drink
+          td
+            a(href="/products/cart/remove"+item._id, class="btn btn-danger") Remove Reservation        

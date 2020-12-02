@@ -1,0 +1,17 @@
+extends ../layout 
+block content
+    h1 Make Reservation
+    form(action="/products/add",method="post")
+        .form-group
+            label(for="name") Name
+            input#name(type="text" class="form-control" name="name")
+        .form-group
+            label(for="seats") No. of Seats
+            input#seats(type="text" class="form-control" name="seats")
+        .form-group
+            label(for="food") Food
+            input#food(type="text" class="form-control" name="food")    
+        .form-group
+            label(for="drink") Drink
+            input#drink(type="text" class="form-control" name="drink")    
+        input(type="submit", value="Submit" class="btn btn-info")    
